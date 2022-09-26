@@ -1,7 +1,6 @@
 package http_test
 
 import (
-	"crypto/tls"
 	"crypto/x509"
 	"encoding/json"
 	"flag"
@@ -12,8 +11,10 @@ import (
 	"strings"
 	"testing"
 
-	http "github.com/useflyent/fhttp"
-	"github.com/useflyent/fhttp/http2"
+	tls "github.com/refraction-networking/utls"
+
+	http "github.com/Leoo0x1/fhttp"
+	"github.com/Leoo0x1/fhttp/http2"
 )
 
 // Basic http test with Header Order + enable push

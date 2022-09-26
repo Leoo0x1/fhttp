@@ -7,10 +7,11 @@
 package http2
 
 import (
-	"crypto/tls"
 	"sync"
 
-	http "github.com/useflyent/fhttp"
+	tls "github.com/refraction-networking/utls"
+
+	http "github.com/Leoo0x1/fhttp"
 )
 
 // ClientConnPool manages a pool of HTTP/2 client connections.

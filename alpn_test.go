@@ -7,15 +7,15 @@ package http_test
 import (
 	"bufio"
 	"bytes"
-	"crypto/tls"
+	tl
 	"crypto/x509"
 	"fmt"
 	"io"
 	"strings"
 	"testing"
 
-	. "github.com/useflyent/fhttp"
-	"github.com/useflyent/fhttp/httptest"
+	. "github.com/Leoo0x1/fhttp"
+	"github.com/Leoo0x1/fhttp/httptest"
 )
 
 func TestNextProtoUpgrade(t *testing.T) {

@@ -2,13 +2,9 @@ package http2_test
 
 import (
 	"bytes"
-	"crypto/tls"
 	"crypto/x509"
 	"errors"
 	"fmt"
-	"github.com/useflyent/fhttp/cookiejar"
-	"github.com/useflyent/fhttp/httptest"
-	"golang.org/x/net/publicsuffix"
 	"log"
 	ghttp "net/http"
 	"net/url"
@@ -16,8 +12,13 @@ import (
 	"strings"
 	"testing"
 
-	http "github.com/useflyent/fhttp"
-	"github.com/useflyent/fhttp/http2"
+	"github.com/Leoo0x1/fhttp/cookiejar"
+	"github.com/Leoo0x1/fhttp/httptest"
+	tls "github.com/refraction-networking/utls"
+	"golang.org/x/net/publicsuffix"
+
+	http "github.com/Leoo0x1/fhttp"
+	"github.com/Leoo0x1/fhttp/http2"
 )
 
 // Tests if connection settings are written correctly

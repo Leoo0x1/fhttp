@@ -17,10 +17,8 @@ import (
 	"compress/zlib"
 	"container/list"
 	"context"
-	"crypto/tls"
 	"errors"
 	"fmt"
-	"github.com/andybalholm/brotli"
 	"io"
 	"log"
 	"net"
@@ -33,7 +31,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/useflyent/fhttp/httptrace"
+	"github.com/andybalholm/brotli"
+	tls "github.com/refraction-networking/utls"
+
+	"github.com/Leoo0x1/fhttp/httptrace"
 
 	"golang.org/x/net/http/httpguts"
 	"golang.org/x/net/http/httpproxy"
@@ -1787,7 +1788,6 @@ var _ io.ReaderFrom = (*persistConnWriter)(nil)
 //	socks5://proxy.com|https|foo.com  socks5 to proxy, then https to foo.com
 //	https://proxy.com|https|foo.com   https to proxy, then CONNECT to foo.com
 //	https://proxy.com|http            https to proxy, http to anywhere after that
-//
 type connectMethod struct {
 	_            incomparable
 	proxyURL     *url.URL // nil for no proxy, else full proxy URL

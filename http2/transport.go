@@ -11,7 +11,6 @@ import (
 	"bytes"
 	"context"
 	"crypto/rand"
-	"crypto/tls"
 	"errors"
 	"fmt"
 	"io"
@@ -28,10 +27,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	http "github.com/useflyent/fhttp"
-	"github.com/useflyent/fhttp/httptrace"
+	tls "github.com/refraction-networking/utls"
 
-	"github.com/useflyent/fhttp/http2/hpack"
+	http "github.com/Leoo0x1/fhttp"
+	"github.com/Leoo0x1/fhttp/httptrace"
+
+	"github.com/Leoo0x1/fhttp/http2/hpack"
 	"golang.org/x/net/http/httpguts"
 	"golang.org/x/net/idna"
 )

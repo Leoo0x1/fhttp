@@ -9,7 +9,6 @@ package cgi
 
 import (
 	"bufio"
-	"crypto/tls"
 	"errors"
 	"fmt"
 	"io"
@@ -19,7 +18,9 @@ import (
 	"strconv"
 	"strings"
 
-	http "github.com/useflyent/fhttp"
+	tls "github.com/refraction-networking/utls"
+
+	http "github.com/Leoo0x1/fhttp"
 )
 
 // Request returns the HTTP request as represented in the current
