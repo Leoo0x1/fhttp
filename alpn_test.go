@@ -7,7 +7,7 @@ package http_test
 import (
 	"bufio"
 	"bytes"
-	tl
+	tls "github.com/refraction-networking/utls"
 	"crypto/x509"
 	"fmt"
 	"io"
